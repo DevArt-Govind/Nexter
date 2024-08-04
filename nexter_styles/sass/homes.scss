@@ -1,0 +1,85 @@
+.homes{
+    grid-column: col-start 1/col-end 8;
+    margin: 10rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    grid-gap: 6rem;
+}
+.home{
+    background-color: $color-grey-light-1;
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 1.2rem;
+
+    border-radius: 1.6rem;
+    overflow: hidden;
+    box-shadow: 2rem 3rem 5rem rgba(#555,0.4);
+
+
+    &__img{
+        width: 100%;
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        z-index: 1; // just to sure that icon would be on top of image 
+                        // and index of image should be higher 
+    }
+    &__heart-icon{
+        grid-row: 1/2;
+        grid-column: 2/3;
+        font-size: 3.2rem;
+        color: $color-primery;
+        z-index: 2;
+        justify-self: end;
+        margin: 1.8rem 2.4rem;
+        cursor: pointer;
+        filter: contrast(140%);
+    }
+
+    &__location,
+    &__rooms{
+        margin-top: 2.4rem;
+    }
+
+    &__location,
+    &__rooms,
+    &__price,
+    &__area{
+        margin-left: 2.4rem;
+    }
+
+    &__icon{
+        font-size: 2rem;
+        color: $color-primery;
+    }
+
+    &__text{
+        font-size: 1.4rem;
+        color: $color-grey-dark-1;
+        font-weight: 500;
+
+    }
+
+    &__name{
+        grid-row: 1/2;
+        grid-column: 1/-1;
+        justify-self: center; // use to align item horizontally or row axis.
+        align-self: end; // use to align item vertically or column axis.
+        z-index: 1;
+
+        width: 70%;
+        font-size: 1.6rem;
+        text-align: center;
+        padding: 1rem;
+        background-color: $color-secondary;
+        color: #fff;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        transform: translateY(40%);
+    }
+
+    .btn{
+        grid-column: 1/-1;
+    }
+}

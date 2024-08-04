@@ -1,0 +1,89 @@
+.header{
+    background-color: #223452;
+    grid-column: full-start/col-end 6;
+    background-image:linear-gradient(to right bottom,rgba(114, 235, 198, 0.2),rgba(8, 235, 167, 0.2)),url("../lady\ eating\ food.jpg") ;
+    background-size:cover;
+    background-position: center;    
+    padding: 2.4rem;
+    padding-top: 0.8rem;
+
+    display: grid;
+    grid-row-gap: 1.2rem;
+    grid-template-rows: 1fr min-content 6rem 1fr;
+
+
+    &__nexter{
+        justify-self: center;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        grid-column-gap: 1.2rem;
+    }
+    &__nexter-logo{
+        font-size: 4.8rem;
+        color: $color-background;
+        justify-self: end;
+       
+    }
+    &__nexter-text{
+        font-size: 4rem;
+        color: $color-background;
+        font-family: $font-secondary;
+    }
+    &__btn--1{
+        justify-self: start;
+        align-self: start;
+
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-family: $font-primery;
+        border: none;
+        box-shadow: 1rem 2rem 5rem rgba(rgb(11, 10, 32),0.5);
+        border-radius: 1.2rem;
+        padding: 1.2rem 1.6rem;
+        color: #fff;
+        cursor: pointer;
+        margin-left: 3.2rem;
+        background-color: #000957;
+        filter: grayscale(60%);
+        transition: all 0.5s;
+    }
+    &__btn--1:hover{
+        background-color: #75ebc733;
+        transform: translateY(3px);
+    }
+
+    &__seenon-text{
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-column-gap: 1rem;
+        align-items: center;
+
+        color: $color-grey-light-2;
+        font-size: 2rem;
+
+        &::before,
+        &::after{
+            content: "";
+            height: 3px;
+            width: 80%;
+            display: block;
+            background-color: currentColor;
+        }
+        &::before{
+            justify-self: end;
+        }
+        
+    }
+    &__seenon-logos{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        justify-items: center;
+     }
+    &__seenon-logo{
+       font-size: 5.6rem;
+       color: $color-background-1;
+       filter: brightness(90%);
+    }
+}

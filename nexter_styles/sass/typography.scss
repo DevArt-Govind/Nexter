@@ -1,0 +1,64 @@
+%heading{
+    font-family: $font-primery;
+    font-weight: 400;
+}
+
+
+.heading-1{
+    @extend %heading;
+    font-size: 4.8rem;
+    color: $color-background-3;
+    font-family: $font-secondary-1;
+    font-weight: 400;
+    filter: grayscale(40%);
+    text-shadow: 0 5rem 5em rgba(rgb(92, 88, 88),0.5);
+}
+.heading-2{
+    @extend %heading;
+    font-size: 4rem;
+    color: $color-grey-dark-1;
+    line-height: 1.2;
+}
+.heading-3{
+    @extend %heading;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: $color-primery;
+    font-weight: 500;
+}
+.heading-4{
+    @extend %heading;
+    font-size: 2rem;
+    font-weight: 500;
+
+    &--dark{
+        color: $color-grey-dark-1;
+    }
+}
+.mb-sm{
+    margin-bottom: 1.5rem;
+}
+.mb-md{
+    margin-bottom: 2rem;
+}
+.ml-sm{
+    margin-left: 3.2rem;
+}
+
+.btn{
+    background-color: $color-primery;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 1.2rem 1.8rem;
+    cursor: pointer;
+    transition: all 0.5s;    
+   
+    &:hover{
+        background-color: $color-primery-dark;
+        transform: translateY(3px);
+    }
+}
